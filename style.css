@@ -7,3 +7,19 @@ body {
 .logo {
   width: 20%;
 }
+.box {
+  /* background-color: ; */
+  border-radius: 20px;
+  border: 10px solid #54bab9;
+  height: 400px;
+  padding: 5px;
+  /* border: 2px solid black; */
+  margin-top: 5px;
+}
+
+hr {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 0.5em dotted black;
+}
