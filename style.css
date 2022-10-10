@@ -8,25 +8,31 @@ body {
 .logo {
   width: 20%;
 }
+.logo-two {
+  width: 20%;
+  margin-left: 80%;
+}
+
 .box {
   /* background-color: ; */
   border-radius: 20px;
   border: 10px solid #54bab9;
-  height: 400px;
+  height: 500px;
   max-width: 500px;
+  width: 350px;
   padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
 
-  /* border: 2px solid black; */
   margin: 40px 0;
 }
 
 hr {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
   width: 55%;
   margin-left: auto;
   margin-right: auto;
@@ -56,8 +62,12 @@ hr {
 .center {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
+p {
+  text-align: center;
+}
 @media only screen and (min-width: 1200px) {
   .btn-size {
     font-size: 1.8rem;
@@ -65,7 +75,7 @@ hr {
 }
 @media only screen and (max-width: 1199px) {
   .btn-size {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 }
 @media only screen and (max-width: 991px) {
@@ -75,10 +85,13 @@ hr {
 }
 @media only screen and (max-width: 767px) {
   .btn-size {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 
   .logo {
+    display: none;
+  }
+  .logo-two {
     display: none;
   }
 }
