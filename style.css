@@ -13,7 +13,12 @@ body {
   border-radius: 20px;
   border: 10px solid #54bab9;
   height: 400px;
+  max-width: 500px;
   padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
 
   /* border: 2px solid black; */
   margin: 40px 0;
@@ -27,6 +32,11 @@ hr {
   margin-right: auto;
   border-top: 0.5em dotted black;
 }
+.latte-art {
+  height: 90%;
+  width: auto;
+  border-radius: 10px;
+}
 
 .position-absolute {
   top: 10px;
@@ -34,29 +44,41 @@ hr {
 #navbarNav {
   justify-content: center;
 }
-
+.atribute {
+  font-size: 12px;
+}
 .style {
   font-family: "Open Sans", sans-serif;
 }
 .btn-size {
   font-size: 2rem;
 }
+.center {
+  display: flex;
+  justify-content: center;
+}
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .btn-size {
     font-size: 1.8rem;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1199px) {
+  .btn-size {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .btn-size {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 767px) {
   .btn-size {
     font-size: 1.5rem;
   }
+
   .logo {
     display: none;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .btn-size {
-    font-size: 1.1rem;
   }
 }
