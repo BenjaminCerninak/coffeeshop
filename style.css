@@ -2,6 +2,13 @@
 body {
   background-color: #fbf8f1;
 }
+/* header */
+.benko {
+  text-align: center;
+  padding: 10px;
+  margin-top: 2%;
+}
+
 #nav {
   background-color: #fbf8f1;
 }
@@ -67,6 +74,19 @@ hr {
 }
 p {
   text-align: center;
+  padding: 10px;
+
+  line-height: 27px;
+}
+.img-zoom {
+  height: 90%;
+  width: auto;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.img-zoom:hover,
+.img-zoom:active {
+  transform: scale(1.13);
 }
 @media only screen and (min-width: 1200px) {
   .btn-size {
