@@ -30,3 +30,6 @@ hr {
 .position-absolute {
   top: 10px;
 }
+#navbarNav {
+  justify-content: center;
+}
