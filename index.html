@@ -54,7 +54,7 @@
                   class="btn btn-light bg-transparent btn-lg"
                   href="#"
                   role="button"
-                  ><span class="btn-size">Kontakt</span></a
+                  ><span class="btn-size btn-contact">Kontakt</span></a
                 >
               </li>
               <li class="nav-item">
@@ -88,21 +88,26 @@
         </div>
       </div>
     </nav>
+
+    <div class="overlay hidden"></div>
     <!-- hr to divide -->
+
     <hr />
     <!-- contacts-->
-    <div class="container-contacts">
-      <div class="row"></div>
-      <img
-        class="hidden contacts"
-        src="images/contacts-img/kontakty.png"
-        alt="kontakty"
-      />
+    <div class="container-contacts justify-content-center">
+      <div class="pop-up">
+        <a class="btn button-close hidden">✖️</a>
+        <img
+          class="hidden contacts"
+          src="images/contacts-img/kontakty.png"
+          alt="kontakty"
+        />
+      </div>
     </div>
     <!-- contacts -->
     <!-- Content -->
     <div class="container">
-      <div class="row">
+      <div class="row d-flex align-items-lg-start">
         <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 center">
           <div class="box">
             <img
@@ -137,7 +142,7 @@
           <p>Ochutnejte kávu připravenou finalistou loňského baristacupu.</p>
         </div>
       </div>
-      <div class="row">
+      <div class="row d-flex align-items-lg-start">
         <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 center">
           <div class="box">
             <img
@@ -317,5 +322,6 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>
