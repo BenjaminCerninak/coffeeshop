@@ -2,6 +2,9 @@
 body {
   background-color: #fbf8f1;
 }
+body {
+  overflow-x: hidden;
+}
 /* header */
 .benko {
   text-align: center;
