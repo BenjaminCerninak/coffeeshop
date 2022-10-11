@@ -56,7 +56,22 @@ hr {
   width: auto;
   border-radius: 10px;
 }
-
+.hidden {
+  visibility: hidden;
+}
+.visible {
+  visibility: visible;
+}
+.contacts {
+  position: absolute;
+}
+.container-contacts {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  bottom: 130px;
+  z-index: 20;
+}
 .position-absolute {
   top: 10px;
 }
