@@ -1,27 +1,27 @@
-const btnContact = document.querySelector(".btn-contact");
-const contacts = document.querySelector(".contacts");
-const btnClose = document.querySelector(".button-close");
-const overlay = document.querySelector(".overlay");
+"use strict";
+const btnNavContacts = document.querySelector(".btn-contact");
+const btnNavMenu = document.querySelector(".btn-menu");
+const btnCloseContacts = document.querySelector(".btn-close-contacts");
+const btnCloseMenu = document.querySelector(".btn-close-menu");
+const contactsWindow = document.querySelector(".contacts");
+const menuWindow = document.querySelector(".menu");
 
-btnContact.addEventListener("click", function (e) {
-  e.preventDefault();
-
-  contacts.classList.add("visible");
-  btnClose.classList.add("visible");
-  overlay.classList.remove("hidden");
-  // body.classList.add("active");
+btnNavContacts.addEventListener("click", function () {
+  contactsWindow.classList.remove("hidden");
+  btnCloseContacts.classList.remove("hidden");
 });
 
-btnClose.addEventListener("click", function () {
-  contacts.classList.remove("visible");
-  btnClose.classList.remove("visible");
-  overlay.classList.add("hidden");
+btnCloseContacts.addEventListener("click", function () {
+  contactsWindow.classList.add("hidden");
+  btnCloseContacts.classList.add("hidden");
 });
 
-if (overlay.classList.contains("hidden")) {
-  overlay.addEventListener("click", function () {
-    contacts.classList.remove("visible");
-    btnClose.classList.remove("visible");
-    overlay.classList.add("hidden");
-  });
-}
+btnNavMenu.addEventListener("click", function () {
+  menuWindow.classList.remove("hidden");
+  btnCloseMenu.classList.remove("hidden");
+});
+
+btnCloseMenu.addEventListener("click", function () {
+  menuWindow.classList.add("hidden");
+  btnCloseMenu.classList.add("hidden");
+});
