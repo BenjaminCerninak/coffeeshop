@@ -5,37 +5,44 @@ const btnCloseContacts = document.querySelector(".btn-close-contacts");
 const btnCloseMenu = document.querySelector(".btn-close-menu");
 const contactsWindow = document.querySelector(".contacts");
 const menuWindow = document.querySelector(".menu");
+const overlay = document.querySelector(".overlay");
 
 btnNavContacts.addEventListener("click", function () {
   if (menuWindow.classList.contains("hidden")) {
     contactsWindow.classList.remove("hidden");
     btnCloseContacts.classList.remove("hidden");
+    overlay.classList.remove("hidden");
   } else {
     menuWindow.classList.add("hidden");
     btnCloseMenu.classList.add("hidden");
     contactsWindow.classList.remove("hidden");
     btnCloseContacts.classList.remove("hidden");
+    overlay.classList.remove("hidden");
   }
 });
 
 btnCloseContacts.addEventListener("click", function () {
   contactsWindow.classList.add("hidden");
   btnCloseContacts.classList.add("hidden");
+  overlay.classList.add("hidden");
 });
 
 btnNavMenu.addEventListener("click", function () {
   if (contactsWindow.classList.contains("hidden")) {
     menuWindow.classList.remove("hidden");
     btnCloseMenu.classList.remove("hidden");
+    overlay.classList.remove("hidden");
   } else {
     contactsWindow.classList.add("hidden");
     btnCloseContacts.classList.add("hidden");
     menuWindow.classList.remove("hidden");
     btnCloseMenu.classList.remove("hidden");
+    overlay.classList.remove("hidden");
   }
 });
 
 btnCloseMenu.addEventListener("click", function () {
   menuWindow.classList.add("hidden");
   btnCloseMenu.classList.add("hidden");
+  overlay.classList.add("hidden");
 });
