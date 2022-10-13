@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cardo:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+html {
+  height: 100%;
+}
 body {
+  min-height: 100%;
   background-color: #fbf8f1;
   overflow-x: hidden;
 }
@@ -39,7 +43,7 @@ body {
 
   margin: 40px 0;
 }
-/* to blur body during the  */
+/* to blur body during the modal window  */
 .overlay {
   position: absolute;
   top: 0;
@@ -77,6 +81,8 @@ hr {
   height: auto;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+.container-menu,
 .container-contacts {
   position: relative;
   display: flex;
@@ -84,18 +90,46 @@ hr {
   bottom: 130px;
   z-index: 20;
 }
-.button-close {
+.menu {
+  position: absolute;
+  border-radius: 17px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  height: auto;
+  width: auto;
+}
+.pop-up-menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 22;
+  width: 600px;
+}
+
+.btn-close-contacts,
+.btn-close-menu {
   z-index: 21;
   border-radius: 30px;
 
   position: absolute;
   left: 30px;
 }
-.button-close:hover,
-.button-close:active {
+.btn-close-menu {
+  top: 4px;
+  left: 82px;
+  background-color: #fbf8f1;
+}
+
+.btn-close-menu:hover,
+.btn-close-menu:active,
+.btn-close-contacts:hover,
+.btn-close-contacts:active {
   cursor: pointer;
   background-color: rgba(251, 248, 241);
 }
+.btn-close-menu:hover {
+  background-color: #54bab9;
+}
+
 .pop-up {
   position: relative;
   display: flex;
@@ -183,6 +217,19 @@ h2 {
   }
 }
 @media only screen and (max-width: 767px) {
+  .menu {
+    position: absolute;
+    border-radius: 17px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    height: auto;
+    width: 80%;
+  }
+  .btn-close-menu {
+    top: 4px;
+    left: 50px;
+    background-color: #fbf8f1;
+  }
+
   .btn-size {
     font-size: 1.1rem;
   }
@@ -205,5 +252,12 @@ h2 {
     display: flex;
     justify-content: center;
     margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .btn-close-menu {
+    top: 4px;
+    left: 39px;
+    background-color: #fbf8f1;
   }
 }
