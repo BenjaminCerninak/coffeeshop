@@ -7,6 +7,7 @@ const contactsWindow = document.querySelector(".contacts");
 const menuWindow = document.querySelector(".menu");
 const overlay = document.querySelector(".overlay");
 
+// nav bar contacts button
 btnNavContacts.addEventListener("click", function () {
   if (menuWindow.classList.contains("hidden")) {
     contactsWindow.classList.remove("hidden");
@@ -20,13 +21,14 @@ btnNavContacts.addEventListener("click", function () {
     overlay.classList.remove("hidden");
   }
 });
-
+// contacts modal window closing button
 btnCloseContacts.addEventListener("click", function () {
   contactsWindow.classList.add("hidden");
   btnCloseContacts.classList.add("hidden");
   overlay.classList.add("hidden");
 });
 
+// nav bar menu button
 btnNavMenu.addEventListener("click", function () {
   if (contactsWindow.classList.contains("hidden")) {
     menuWindow.classList.remove("hidden");
@@ -40,7 +42,7 @@ btnNavMenu.addEventListener("click", function () {
     overlay.classList.remove("hidden");
   }
 });
-
+// menu modal window closing button
 btnCloseMenu.addEventListener("click", function () {
   menuWindow.classList.add("hidden");
   btnCloseMenu.classList.add("hidden");
