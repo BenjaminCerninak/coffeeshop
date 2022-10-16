@@ -111,7 +111,7 @@ hr {
 .btn-close-menu {
   z-index: 21;
   border-radius: 30px;
-  border: 30px transparent;
+  border: 2px transparent;
   position: absolute;
   left: 30px;
 }
