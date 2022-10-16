@@ -7,62 +7,60 @@ const contactsWindow = document.querySelector(".contacts");
 const menuWindow = document.querySelector(".menu");
 const overlay = document.querySelector(".overlay");
 
-// add class hidden function
+//function add class hidden
 const addClassHidden = function (input) {
   return input.classList.add("hidden");
 };
 
-// remove class hidden function
+//function remove class hidden
 const removeClassHidden = function (input) {
   return input.classList.remove("hidden");
 };
 
-// return true if contains class hidden
+//function return true if contains class hidden
 const containsClassHidden = function (input) {
   input.classList.contains("hidden");
+};
+// contacts array
+const contactsArr = [contactsWindow, btnCloseContacts, overlay];
+
+// menu array
+const menuArr = [menuWindow, btnCloseMenu, overlay];
+
+//function hide modale window
+
+const hideModaleWindow = function (inputArr) {
+  inputArr.forEach((element) => {
+    addClassHidden(element);
+  });
+};
+
+//function show modale window
+const showModaleWIndow = function (inputArr) {
+  inputArr.forEach((element) => {
+    removeClassHidden(element);
+  });
 };
 
 // nav bar contacts button
 btnNavContacts.addEventListener("click", function () {
-  if (containsClassHidden(menuWindow)) {
-    // show modale window
-    removeClassHidden(contactsWindow);
-    removeClassHidden(btnCloseContacts);
-    removeClassHidden(overlay);
-  } else {
-    addClassHidden(menuWindow);
-    addClassHidden(btnCloseMenu);
-    removeClassHidden(contactsWindow);
-    removeClassHidden(btnCloseContacts);
-    removeClassHidden(overlay);
-  }
+  // show contacts modale window
+  showModaleWIndow(contactsArr);
 });
 // contacts modal window closing button
 btnCloseContacts.addEventListener("click", function () {
-  addClassHidden(contactsWindow);
-  addClassHidden(btnCloseContacts);
-  addClassHidden(overlay);
+  hideModaleWindow(contactsArr);
 });
 
 // nav bar menu button
 btnNavMenu.addEventListener("click", function () {
-  if (containsClassHidden(contactsWindow)) {
-    removeClassHidden(menuWindow);
-    removeClassHidden(btnCloseMenu);
-    removeClassHidden(overlay);
-  } else {
-    addClassHidden(contactsWindow);
-    addClassHidden(btnCloseContacts);
-    removeClassHidden(menuWindow);
-    removeClassHidden(btnCloseMenu);
-    removeClassHidden(overlay);
-  }
+  // show menu modale window
+  showModaleWIndow(menuArr);
 });
 // menu modal window closing button
 btnCloseMenu.addEventListener("click", function () {
-  addClassHidden(menuWindow);
-  addClassHidden(btnCloseMenu);
-  addClassHidden(overlay);
+  // hide menu modale window
+  hideModaleWindow(menuArr);
 });
 
 // close modal window by clicking the overlay
