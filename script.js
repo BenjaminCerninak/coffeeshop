@@ -48,3 +48,14 @@ btnCloseMenu.addEventListener("click", function () {
   btnCloseMenu.classList.add("hidden");
   overlay.classList.add("hidden");
 });
+
+// close modal window by clicking the overlay
+overlay.addEventListener("click", function () {
+  if (!overlay.classList.contains("hidden")) {
+    overlay.classList.add("hidden");
+    menuWindow.className = " menu hidden";
+    contactsWindow.className = " contacts hidden";
+    btnCloseMenu.className = "btn btn-close-menu hidden";
+    btnCloseContacts.className = "btn btn-close-contacts hidden";
+  }
+});

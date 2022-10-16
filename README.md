@@ -1,8 +1,8 @@
 # coffeeshop
 
-## Benko coffeeshop landing page
+## Benko coffeeshop website
 
-The goal of this project was create a landing page for a coffeeshop.
+The goal of this project was create a website for a coffeeshop.
 
 Technologies: Bootstrap, Html, Css and JavaScript
 
