@@ -43,7 +43,8 @@ const showModaleWIndow = function (inputArr) {
 };
 
 // nav bar contacts button
-btnNavContacts.addEventListener("click", function () {
+btnNavContacts.addEventListener("click", function (e) {
+  e.preventDefault();
   // show contacts modale window
   showModaleWIndow(contactsArr);
 });
@@ -53,7 +54,8 @@ btnCloseContacts.addEventListener("click", function () {
 });
 
 // nav bar menu button
-btnNavMenu.addEventListener("click", function () {
+btnNavMenu.addEventListener("click", function (e) {
+  e.preventDefault();
   // show menu modale window
   showModaleWIndow(menuArr);
 });
